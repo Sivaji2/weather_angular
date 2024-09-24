@@ -1,0 +1,37 @@
+<!-- todo-list.component.html -->
+<!--<link rel="stylesheet" href="todo-list.component.css">
+
+<body>
+  
+<div class="kk">
+  <div class="fi">
+    <h1>DATA</h1> </div>
+<div class="aa">
+ 
+  <input type="text" [value]="weatherData ? formatWeatherData(weatherData) : ''" readonly style="font-size: larger;">
+  <button (click)="addTask()" style="font-size: larger;">Add to To-Do List</button>
+</div>
+
+<div *ngFor="let task of todoList; let i = index" class="bb" style="font-size: larger;">
+  <span>{{ task }}</span>
+  <button (click)="deleteTask(i)">Delete</button>
+</div>
+</div>
+</body>-->
+
+<!-- todo-list.component.html -->
+<div class="kk">
+  <div class="fi">
+    <h1>DATA</h1> </div>
+<div class="aa">
+  <input type="text" [value]="weatherData ? formatWeatherData(weatherData) : ''" readonly style="font-size: larger;">
+  <button (click)="addTask()"style="font-size: larger;">Add to To-Do List</button>
+</div>
+
+<div class="todo-container">
+  <div *ngFor="let task of todoList; let i = index" class="todo-item" [@fadeInOut]>
+    <span>{{ task }}</span>
+    <button (click)="deleteTask(i)">Delete</button>
+  </div>
+</div>
+</div>

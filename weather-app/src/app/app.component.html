@@ -1,0 +1,13 @@
+<!-- app.component.html -->
+<link rel="stylesheet" href="app.component.css">
+<body>
+  
+
+<div>
+  <app-weather (weatherAdded)="addWeather($event)"></app-weather>
+</div>
+
+<div>
+  <app-todo-list [weatherData]="weatherData"></app-todo-list>
+</div>
+</body>

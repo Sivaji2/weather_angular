@@ -1,0 +1,18 @@
+<!-- weather.component.html -->
+<body>
+   
+<div class="cool">
+   <div class="fi">
+      <h1>Weather Report</h1></div>
+<div class="fire">
+    <input type="text" [(ngModel)]="city" placeholder="Enter city name" style="font-size: x-large;">
+    <button (click)="getWeather()" style="font-size: large;">Get Weather</button>
+  </div>
+  
+  <div *ngIf="weatherData" class="name"  style="font-size: xx-large;">
+     <h2>{{ weatherData.name }}</h2>
+     <p>Temperature: {{ weatherData.main.temp }}</p>
+     <p>Description: {{ weatherData.weather[0].description }}</p>
+  </div>
+  </div>
+  </body>
