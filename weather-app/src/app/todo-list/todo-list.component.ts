@@ -26,9 +26,10 @@ export class TodoListComponent {
   formatWeatherData(weatherData: any): string {
     if (weatherData) {
       const cityName = weatherData.name;
-      const temperature = weatherData.main.temp;
+      const temperatureK = weatherData.main.temp;
+      const temperatureC = (temperatureK - 273.15).toFixed(1); // One decimal place
       const description = weatherData.weather[0].description;
-      return `${cityName}, Temperature: ${temperature}, Description: ${description}`;
+      return `${cityName}, Temperature: ${temperatureC} °C, Description: ${description}`;
     }
     return '';
   }

@@ -11,7 +11,7 @@
   
   <div *ngIf="weatherData" class="name"  style="font-size: xx-large;">
      <h2>{{ weatherData.name }}</h2>
-     <p>Temperature: {{ weatherData.main.temp }}</p>
+     <p>Temperature: {{ weatherData.main.temp - 273.15 | number:'1.0-1' }} °C</p>
      <p>Description: {{ weatherData.weather[0].description }}</p>
   </div>
   </div>
